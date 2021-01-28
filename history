@@ -1,0 +1,8 @@
+# Meeting 2021-01-27, LJH,CXY,ZZL
+1. CT 核磁（使用flirt，cross correlation loss）线性配准（带头骨），得到转换矩阵 
+2. 个体核磁结构像去头骨（bet），得到MRI brain
+3. 将转换矩阵用到MRI brain，然后resample到CT空间。得到resampled MRI brain
+4. 用resampled MRI brain做为mask去除CT中的脑壳 （fslmath），得到CT brain
+5. 用nibabel读取CT brain，开发分割算法，分割出电极
+6. 确定电极所在的解剖位置
+7. 可视化电极和大脑的位置关系
